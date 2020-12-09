@@ -5,7 +5,7 @@ class MyForm extends React.Component {
   render() {
     return (
       <form>
-        <h1>Hello Worldgit push</h1>
+        <h1>Hello World</h1>
         <p>Enter your name:</p>
         <input
           type="text"
