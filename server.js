@@ -16,12 +16,13 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 // routes acquisition
 
-const bookRoutes = require("./routes/books");
-const userRoutes = require("./routes/users");
-
+const userRoutes = require("./routes/user");
+const productsRoutes = require("/routes/products")
+const cartRoutes = require("./routes/books");
 
 app.use("/", userRoutes)
-app.use("/api", bookRoutes)
+app.use("/products", productsRoutes)
+app.use("/cart", cartRoutes)
 
 
 // Start the API server

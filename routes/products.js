@@ -13,7 +13,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the posts
-  app.get("/api/books", function(req, res) {
+  app.get("/api/products", function(req, res) {
     var query = {};
     if (req.query.user_id) {
       query.UserId = req.query.user_id;
@@ -24,8 +24,8 @@ module.exports = function(app) {
     db.Post.findAll({
       where: query,
       include: [db.User]
-    }).then(function(dbBooks) {
-      res.json(dbBooks);
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
     });
   });
 
