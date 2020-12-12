@@ -1,17 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class MyForm extends React.Component {
-  render() {
-    return (
-      <form>
-        <h1>Hello World</h1>
-        <p>Enter your name:</p>
-        <input
-          type="text"
-        />
-      </form>
-    );
-  }
-}
-ReactDOM.render(<MyForm />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
+

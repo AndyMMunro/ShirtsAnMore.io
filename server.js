@@ -1,20 +1,35 @@
 const express = require("express");
-const routes = require("./routes");
+const routes = require("routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+// models sync
+const db = require("/models");
 
-
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
-
-// Parse application body as JSON
+// Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+// Add routes, both API and view
 app.use(routes);
+// routes acquisition
 
-// Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
+const userRoutes = require("./routes/user");
+const productsRoutes = require("/routes/products")
+const cartRoutes = require("./routes/books");
+
+app.use("/", userRoutes)
+app.use("/products", productsRoutes)
+app.use("/cart", cartRoutes)
+
+
+// Start the API server
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
