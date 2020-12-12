@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "dev": "npx nodemon server.js -w server",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
@@ -16,23 +16,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bcryptjs": "2.4.3",
     "concurrently": "^4.1.0",
-    "express": "^4.17.1",
-    "express-session": "^1.16.1",
-    "mysql2": "^1.6.5",
-    "nodemon": "^1.19.4",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "sequelize": "^5.8.6"
+    "nodemon": "^1.18.7",
+    "express": "^4.16.3",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
   },
   "dependencies": {
-    "axios": "^0.18.1",
-    "express-openid-connect": "^2.0.0",
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
-    "react-router-dom": "^5.2.0",
-    "sequelize": "^6.3.5"
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
   }
 }
