@@ -12,9 +12,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-require("./routes/user")(app);
+require("./routes/users")(app);
 require("./routes/products")(app);
-require("./routes/products")(app);
+// require("./routes/cart")(app);
 // Start the API server
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
