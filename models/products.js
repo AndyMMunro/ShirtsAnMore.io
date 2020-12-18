@@ -1,43 +1,43 @@
 
-module.export=function(sequelize, Datatypes) {
-  const products = sequelize.define("books", {
+module.export=function(sequelize, DataTypes) {
+  const Products = sequelize.define("Products", {
     id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
     },
     title: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       len:[64],
     },
     price:{
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       len: [10],
     },
     category:{
-      type:Datatypes.STRING,
+      type:DataTypes.STRING,
       allowNull: false,
       len:[64],
     },
     description:{
-      type:Datatypes.STRING,
+      type:DataTypes.STRING,
       allowNull: false,
       len:[1000],
     },
     image:{
-      type:Datatypes.STRING,
+      type:DataTypes.STRING,
       allowNull: false,
     },
 
   });
 
-  products.associate = function (models){
-    products.belongsTo(models.users, {
+  Products.associate = function (models){
+    Products.belongsTo(models.User, {
       foreignKey: {
         allowNull: true,
       },
     });
   };
-  return products;
+  return Products;
 }

@@ -1,25 +1,24 @@
-
-module.export=function(sequelize, Datatypes) {
-  const user = sequelize.define("user", {
+module.exports=function(sequelize, DataTypes) {
+  const User = sequelize.define("User", {
     
     name: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       len:[64],
     },
     email:{
-      type:Datatypes.STRING,
+      type:DataTypes.STRING,
       allowNull: false,
       len: [64],
-    },
+    }
 
   });
   
-  user.associate = function (models){
-    user.hasMany(models.books, {
+  User.associate = function (models){
+    User.hasMany(models.Products, {
       onDelete: "cascade"
     });
   };
 
-  return user;
+  return User;
 }

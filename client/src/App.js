@@ -1,20 +1,25 @@
-import React from "react";
-import Nav from "./components/Nav";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from "./components/Container";
-import LoginForm from "./components/LoginForm/LoginForm";
-
+import React from 'react';
+import Navbar from './components/Navbar';
+import './App.css';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Services from './components/pages/Services';
+import Products from './components/pages/Products';
+import SignUp from './components/pages/SignUp';
 
 function App() {
-  // console.log("hope this works");
   return (
-    <Router>
-          <Container>
-            <Nav />
-              <Route exact path="/LoginForm" component={LoginForm} />
-          </Container>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/services' component={Services} />
+          <Route path='/products' component={Products} />
+          <Route path='/sign-up' component={SignUp} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
