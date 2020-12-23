@@ -4,9 +4,10 @@ import './Us.css';
 
 function AboutUs() {
   return (
-    <div class="col-sm-4">
-      
-    </div>
+    <div class="container-fluid bg-3 text-center">
+      <h1>Who Are We?</h1>
+    </div>    
+    
   );
 }
 
