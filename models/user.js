@@ -6,7 +6,18 @@ module.exports=function(sequelize, DataTypes) {
     //   autoIncrement: true,
     //   primaryKey: true
     // },
+
     name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len:[64],
+    },
+    nameuser: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len:[64],
+    },
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       len:[64],
@@ -15,7 +26,7 @@ module.exports=function(sequelize, DataTypes) {
       type:DataTypes.STRING,
       allowNull: false,
       len: [64],
-    }
+    },
 
   });
   
