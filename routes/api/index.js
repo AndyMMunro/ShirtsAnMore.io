@@ -1,7 +1,9 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
+const productRoutes = require("./products");
 
-// Book routes
-router.use("/books", bookRoutes);
+
+// Book routes end points what how in the URL
+router.use("/products", productRoutes);
 
 module.exports = router;
+
