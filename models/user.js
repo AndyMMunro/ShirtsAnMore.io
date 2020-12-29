@@ -7,12 +7,12 @@ module.exports=function(sequelize, DataTypes) {
     //   primaryKey: true
     // },
 
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      len:[64],
-    },
-    userName: {
+    // name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   len:[64],
+    // },
+     userName: {
       type: DataTypes.STRING,
       allowNull: false,
       len:[64],

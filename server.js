@@ -1,13 +1,14 @@
 const express = require("express");
 const routes = require("./routes");
 const app = express();
+const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 // models sync
 const db = require("./models");
 
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -15,9 +16,13 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and data
 // app.use(routes);
 require("./routes/api/products")(app);
+
+
 // require("./routes/users")(app);
 
 // require("./routes/cart")(app);
+
+
 // Start the API server
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
