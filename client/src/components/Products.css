@@ -1,0 +1,31 @@
+.Products{
+    text-align: center;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    
+  }
+  
+  .products img {
+    width: 50%;
+    display: block;
+    
+  }
+  
+  .product {
+    padding: 40px;
+  }
+  
+  button {
+    font-size: 20px;
+    padding: 10px;
+    
+  }
+  
+  header {
+    background-color: rgb(7, 7, 7);
+    height: 70px;
+    padding-top: 20px;
+    text-align: center;
+  }
