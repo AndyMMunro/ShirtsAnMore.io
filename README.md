@@ -1,8 +1,12 @@
-## Due to our project being to large we were not able to deploy to Heroku
+
 
 # Project 3: Shirt-n-More
- 
-### Pictures 
+
+## Deployments 
+To view a video of our website working hit the link here: https://drive.google.com/file/d/1czOs5s0FysW_9mAmUrbRImWiKBqXQ8Ec/view
+ Heroku: Due to our project being to large we were getting a "Slug Error" and we were not able to deploy to Heroku
+
+## Pictures 
 
 #### Home Page
 ![alt text](snm1.JPG)
@@ -19,5 +23,3 @@
 #### Cart Page
 ![alt text](snm5.JPG)
 
-## Video 
-https://drive.google.com/file/d/1czOs5s0FysW_9mAmUrbRImWiKBqXQ8Ec/view
