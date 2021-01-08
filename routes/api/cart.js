@@ -10,7 +10,10 @@ module.exports = function(app) {
     });
   });
 
+
+
   // router.get("/api/cart/:id", function(req, res) {
+
   //   // Here we add an "include" property to our options in our findOne query
   //   // We set the value to an array of the models we want to include in a left outer join
   //   // In this case, just db.Post
@@ -30,14 +33,6 @@ module.exports = function(app) {
     });
   });
 
-//   router.delete("/api/cart/:id", function(req, res) {
-//     db.Cart.destroy({
-//       where: {
-//         id: req.params.id
-//       }
-//     }).then(function(dbCart) {
-//       res.json(dbCart);
-//     });
-//   });
+
 
 };

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Password",
-    "database": "shirts",
+    "password": "timmit3p",
+    "database": "store",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"

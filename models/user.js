@@ -1,3 +1,7 @@
+const Sequelize = require('sequelize');
+
+
+
 module.exports=function(sequelize, DataTypes) {
   
   const User = sequelize.define("User", {
@@ -7,27 +11,34 @@ module.exports=function(sequelize, DataTypes) {
     //   primaryKey: true
     // },
 
-    name: {
+     name: {
+       type: DataTypes.STRING,
+         allowNull: false,
+       len:[64],
+       min: 6,
+       max: 255
+     },
+     userName: {
       type: DataTypes.STRING,
       allowNull: false,
       len:[64],
-    },
-    userName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      len:[64],
+      min: 6,
+      max: 255
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       len:[64],
+      min: 6,
+      max: 1024
     },
     email:{
       type:DataTypes.STRING,
       allowNull: false,
       len: [64],
-    },
-
+      min: 6,
+      max: 255
+    }
   });
   
   // User.associate = function (models){
@@ -35,6 +46,7 @@ module.exports=function(sequelize, DataTypes) {
   //     onDelete: "cascade"
   //   });
   // };
-
+  
   return User;
+  
 }
