@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 3001;
 // models sync
 const db = require("./models");
 // const router = require("./routes/api");
+
 const authRoute = require('./routes/api/authRouteUser');
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
